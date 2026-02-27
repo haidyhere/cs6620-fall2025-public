@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from flask_cors import CORS
 from pydub import AudioSegment
 import tempfile
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app)
@@ -290,6 +291,14 @@ def get_status():
         "csvLoaded": csv_file_loaded,
         "csvRecordCount": len(csv_error_data)
     })
+@app.route('/health')
+def health():
+    return {
+        "status": "healthy",
+        "version": "2.0",
+        "deployment_method": "GitHub Actions + AWS SSM",
+        "timestamp": datetime.now().isoformat()
+    }
 
 
 # Error labeling routes
