@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<div style="background:#111;color:#fff;padding:10px;text-align:center;">
-  <h2>Hello from Automated CI/CD Pipeline!</h2>
-  <p><strong>Version:</strong> 2.0 - Automated Deployment</p>
-  <p><strong>Deployed via:</strong> GitHub Actions + AWS SSM</p>
-  <p><strong>Assignment:</strong> Automated EC2 Deployment</p>
-  <p>
-    <strong>Build/Load Time:</strong> <span id="buildTime"></span>
-  </p>
-</div>
-<script>
-  document.getElementById("buildTime").textContent = new Date().toLocaleString();
-</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,6 +162,18 @@
     </style>
 </head>
 <body>
+    <div style="background:#111;color:#fff;padding:10px;text-align:center;">
+  <h2>Hello from Automated CI/CD Pipeline!</h2>
+  <p><strong>Version:</strong> 2.0 - Automated Deployment</p>
+  <p><strong>Deployed via:</strong> GitHub Actions + AWS SSM</p>
+  <p><strong>Assignment:</strong> Automated EC2 Deployment</p>
+  <p>
+    <strong>Build/Load Time:</strong> <span id="buildTime"></span>
+  </p>
+</div>
+<script>
+  document.getElementById("buildTime").textContent = new Date().toLocaleString();
+</script>
     <div class="container">
         <h1>Python Network Audio Player</h1>
 
